@@ -1,18 +1,18 @@
-function cooking(arr) {
+function cookingOperations(number, ...operations) {
+    let currentNumber = Number(number);
 
-    let num = Number(arr[0]);
-    let status = 0;
-    for (let i = 0; i < arr.length; i++) {
+    let operationsMap = {
+        'chop': num => num / 2,
+        'dice': num => Math.sqrt(num),
+        'spice': num => num + 1,
+        'bake': num => num * 3,
+        'fillet': num => num * 0.8
+    };
 
-        if (arr[i] == 'chop') {
-
-            status = num / 2;
-            num = status;
-            console.log(num);
-        }
-    }
-
+    operations.forEach(operation => {
+        currentNumber = operationsMap[operation](currentNumber);
+        console.log(currentNumber.toFixed(1));
+    });
 }
 
-cooking(['32', 'chop', 'chop', 'chop', 'chop', 'chop']);
-cooking(['9', 'dice', 'spice', 'chop', 'bake', 'fillet']);
+cookingOperations('9', 'dice', 'spice', 'chop', 'bake','fillet');
