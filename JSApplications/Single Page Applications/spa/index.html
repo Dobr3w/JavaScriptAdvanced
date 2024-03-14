@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/src/app.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a id="homeBtn" href="/">Home</a>
+        <a id="loginBtn" href="/login.html">Login</a>
+    </nav>
+
+    <div id="loading">
+        <span>Loading &hellip;</span>
+    </div>
+
+    <section id="homeView">
+        <h1>Welcome to Movies</h1>
+        <p>Here you can find information about popular titles.</p>
+        <ul id="list">
+
+        </ul>
+    </section>
+
+    <section id="loginView">
+        <h1>Login to Movies</h1>
+        <form id="loginForm">
+            <label for="email">Email<input type="text" name="email"></label>
+            <label for="password">Password<input type="password" name="password"></label>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+    <section id="detailsView">
+        <h1>Movie title</h1>
+        <img src="" alt="">
+        <p>desc</p>
+    </section>
+</body>
+
+</html>
