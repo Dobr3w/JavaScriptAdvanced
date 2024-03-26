@@ -1,4 +1,4 @@
-import { post, get } from "./requester.js";
+import { requesterMethod} from "./requester.js";
 
 const endPoints = {
     register: "users/register",
@@ -8,15 +8,15 @@ const endPoints = {
 }
 
 async function register(data) {
-    return await post(endPoints.register, data);
+    return await requesterMethod.post(endPoints.register, data);
 }
 
 async function login(data) {
-    return await post(endPoints.login, data);
+    return await requesterMethod.post(endPoints.login, data);
 }
 
 async function logout() {
-return get(endPoints.logout);
+return requesterMethod.get(endPoints.logout);
 }
 
 export {

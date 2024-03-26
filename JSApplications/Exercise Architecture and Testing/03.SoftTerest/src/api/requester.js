@@ -60,7 +60,7 @@ async function del(url) {
     return await requester("DELETE", url);
 }
 
-export {
+export const requesterMethod =  {
     get,
     post,
     update,

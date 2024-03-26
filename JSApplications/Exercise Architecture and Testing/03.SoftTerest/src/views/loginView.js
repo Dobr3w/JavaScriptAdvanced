@@ -24,4 +24,5 @@ async function onSubmit(event) {
     setUser(userData);
     context.updateNav();
     context.goTo("/home");
+    form.reset();
 }
