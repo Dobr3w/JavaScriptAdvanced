@@ -34,5 +34,5 @@ async function onSubmit(e) {
     }
 
     await dataService.addNewEvent({ name, imageUrl, category, description, date });
-    context.goTo("/");
+    context.goTo("/allEvents");
 }

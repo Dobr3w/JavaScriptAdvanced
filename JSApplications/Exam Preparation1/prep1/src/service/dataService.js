@@ -11,7 +11,7 @@ const endpoints = {
 
 
 async function getAllEvents() {
-    return await api.get(BASE_URL + endpoints.event);
+    return await api.get(BASE_URL + endpoints.allEvents);
 }
 
 async function addNewEvent(data) {

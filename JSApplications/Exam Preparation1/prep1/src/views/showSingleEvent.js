@@ -24,7 +24,7 @@ const singleEventView = (event, isOwner) => html`
     <!--Bonus - Only for logged-in users ( not authors )-->
     <div id="action-buttons">
         ${isOwner ? getButtons(event._id) : ""}
-        <a href="" id="go-btn">Going</a>
+        <!-- <a href="" id="go-btn">Going</a> -->
     </div>
     </div>
 </section>`;

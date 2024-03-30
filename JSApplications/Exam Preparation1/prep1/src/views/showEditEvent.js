@@ -5,7 +5,7 @@ const aditEventViewTemplate = (event) => html`
 <!-- Create Page (Only for logged-in users) -->
 <section id="create">
     <div class="form">
-    <h2>Add Event</h2>
+    <h2>Edit Event</h2>
     <form class="create-form" @submit="${onEdit}">
         <input type="text" name="name" id="name" placeholder="Event" value="${event.name}"/>
         <input type="text" name="imageUrl" id="event-image" placeholder="Event Image URL" value="${event.imageUrl}"/>
@@ -38,5 +38,5 @@ async function onEdit(e){
     }
 
     await dataService.editEvent(id,eventData);
-    context.goTo("/");
+    context.goTo(`/data/events/${id}`);
 }

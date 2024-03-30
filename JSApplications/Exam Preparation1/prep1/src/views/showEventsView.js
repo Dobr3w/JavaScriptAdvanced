@@ -3,7 +3,11 @@ import { dataService } from "../service/dataService.js";
 
 const allEventsView = (events) => {
     if (events.length === 0) {
-        return html`<h4>No Events yet.</h4>`;
+        return html`
+        <h2>Current Events</h2>
+        <section id="dashboard">
+          <h4>No Events yet.</h4>
+        </section>`;
     }
     
     return html`
